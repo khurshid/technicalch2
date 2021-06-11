@@ -26,7 +26,7 @@ function ProjectModal(props) {
         {rdata["blurb"]}
         </p>
         <p><span>Backers:</span>{rdata["num.backers"]}</p>
-        <p><span>Amount Pledged:</span>{rdata["currency"] && rdata["currency"].toLocaleUpperCase()} {rdata["amt.pledged"]}</p>
+        <p><span>Amount Pledged:</span>{rdata["currency"].toLocaleUpperCase()} {rdata["amt.pledged"]}</p>
          </Modal.Body>
       <Modal.Footer>
         <Button href={rdata["url"]}>View Project</Button>

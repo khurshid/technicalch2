@@ -6,24 +6,7 @@ import axios from "axios";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
-/*
-amt.pledged: 15823
-blurb: "'Catalysts, Explorers & Secret Keepers: Women of Science Fiction' is a take-home exhibit & anthology by the Museum of Science Fiction."
-by: "Museum of Science Fiction"
-country: "US"
-currency: "usd"
-end.time: "2016-11-01T23:59:00-04:00"
-location: "Washington, DC"
-num.backers: "219382"
-percentage.funded: 186
-s.no: 0
-state: "DC"
-title: "Catalysts, Explorers & Secret Keepers: Women of SF"
-type: "Town"
-url: "/projects/1608905146/catalysts-explorers-and-secret-keepers-women-of-sf?ref=discovery"
-__proto__: Object
-*/
-function MyVerticallyCenteredModal(props) {
+function ProjectModal(props) {
   const {rdata} = {...props};
   return (
     <Modal
@@ -50,6 +33,7 @@ function MyVerticallyCenteredModal(props) {
       </Modal.Footer>
     </Modal>
   );
+
 }
 
 function App() {
@@ -66,7 +50,7 @@ useEffect(() => {
 }, [])
   return (
     <div className="App">
-          <MyVerticallyCenteredModal
+          <ProjectModal
         show={modalShow}
         onHide={() => setModalShow(false)}
         rdata ={cdata}
